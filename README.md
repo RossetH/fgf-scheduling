@@ -7,7 +7,7 @@ Double Round Robin Tournment Scheduling
 
 The scheduling of round-robin tournaments is a challenging task which the operations research community is studying for quite some years. 
 
-_Round robin tournaments_ are tournaments where each team plays against all other teams. The _double round-robin tournaments_ are the most common variant, where the teams play twice against each other. For double round-robin schedules, commonly, the teams have an associated venue, and typically the two games between a pair of opponents in required to happen on opposite venues.
+_Round robin tournaments_ are tournaments where each team plays against all other teams. The _double round-robin tournaments_ are the most common variant, where the teams play twice against each other. 
 
 There are combinatory mathematical methods to schedule simple round-robin tournaments. The challenge starts when the scheduled timetable has to satisfy real-world constraints. For instance, it may be required by television networks that some matches occur on a specific date. Or two teams share a local venue and can't play a home game against different opponents on the same day, etc.
 
@@ -27,7 +27,7 @@ There are a few common terms for the sports scheduling area:
 
 ## The Problem
 
-Gauchão is the regional first division football tournament of Rio Grande do Sul, the southernmost state of Brazil. The tournament follows a double round-robin setup and has 12 teams. The tournament has **12** teams and in 2021 followed a **_single round-robin_** setup. Being a regional competition, each team returns to its hometown after an excursion to play in an opposite venue.
+Gauchão is the regional first division football tournament of Rio Grande do Sul, the southernmost state of Brazil. The tournament has **12** teams and in 2021 followed a **_single round-robin_** setup. Being a regional competition, each team returns to its hometown after an excursion to play in an opposite venue.
 
 ### 2021 Schedule:
 
