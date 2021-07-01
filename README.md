@@ -40,7 +40,7 @@ For these cases, a home-away-home pattern is desired. A timetable with too many 
 
 Then, we want to find a schedule that minimizes the number of breaks and at the same time takes additional constraints into account. 
 
-> Problem known as the constrained minimum break problem.
+> Problem known as the _constrained minimum break problem_.
 
 ### Constrained minimum number of breaks
 
@@ -90,9 +90,7 @@ The number of breaks in the 2021 timetable was 26, way above the minimum viable 
 
 Also, the distribution of these breaks is not fair. There are teams with 2 breaks advantage on its opponents. Thus, there is room for improvement in this timetabling case.
 
-## Methodology
-
-### Algorithm
+## Algorithm
 
 ## References 
 
