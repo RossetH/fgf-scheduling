@@ -42,53 +42,56 @@ Then, we want to find a schedule that minimizes the number of breaks and at the 
 
 > Problem known as the _constrained minimum break problem_.
 
-### Constrained minimum number of breaks
+### Constrained minimum number of breaks problem
 
     Problem Pmin:
         Instance: A timetable T of 2n teams.
         Task: Find a feasible home–away assignment 
-        consistent with T which minimizes the
-        number of breaks.
+        consistent with T, which minimizes the number 
+        of breaks while respecting additional 
+        home–away pattern constraints.
 
 ## Case Study
 
 Gauchão is the regional first division football tournament of Rio Grande do Sul, the southernmost state of Brazil. The tournament has **12** teams and in 2021 followed a **_single round-robin_** setup. Being a regional competition, each team returns to its hometown after an excursion to play in an opposite venue.
 
-### 2021 Schedule:
+The 2021 timetable was:
 
-|Slot               | 1   | 2   | 3     | 4     | 5     | 6     | 7     | 8     | 9     | 10    | 11    |
-|:-----------------:|:---:|:---:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-1 Internacional     |+02  |-11  |+07    |+04 [B]|-09    |+03    |-08    |+05    |-12    |-06 [B]|+10    |
-2 Juventude         |-01  |+07  |-09    |+11    |-04    |+12    |-05    |-02    |-03    |+02 [B]|+08    |
-3 Caxias do Sul     |+12  |-05  |+06    |-08    |+10    |-01    |+07    |-09    |+02    |+04 [B]|-11    |
-4 Ypiranga          |-07  |+09  |-11    |-01 [B]|+02    |+05 [B]|-06    |+08    |-10    |-03 [B]|+12    |
-5 São José          |-10  |+03  |+12 [B]|-06    |+08    |-04    |+02    |-01    |+07    |+11 [B]|-09    |
-6 Aimoré            |-08  |+10  |-03    |+05    |-12    |-11 [B]|+04    |-02    |+09    |+01 [B]|-07    | 
-7 São Luiz          |+04  |-02  |-01 [B]|+09    |-11    |+10    |-03    |+12    |+07    |+07 [B]|+06    |
-8 Brasil de Pelotas |+06  |-12  |-10 [B]|+03    |-05    |-09 [B]|+01    |-04    |+11    |+07 [B]|-02    |
-9 Novo Hamburgo     |+11  |-04  |+02    |-07    |+01    |+08 [B]|-10    |+03    |+09    |+09 [B]|+05    |
-10 Esportivo        |+05  |-06  |+08    |+12 [B]|-03    |-07    |+09    |-11    |+04    |+02 [B]|+10    |
-11 Pelotas          |-09  |+01  |+04 [B]|-02    |+07    |+06 [B]|-12    |+10    |-08    |-05 [B]|+03    |
-12 Grêmio           |-03  |+08  |-05    |-10 [B]|+06    |-02    |+11    |-07    |+01    |+09 [B]|-04    |
+|Slot                 | 1   | 2   | 3      | 4      | 5      | 6      | 7      | 8      | 9      | ESP    | PLT    |
+|:-------------------:|:---:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+INT Internacional     |+ECJ  |-PLT|+SNL    |+YFC [B]|-NHA    |+CAX    |-GEB    |+SAJ    |-GRE    |-CEA [B]|+ESP    |
+ECJ Juventude         |-INT  |+SNL|-NHA    |+PLT    |-YFC    |+GRE    |-SAJ    |-ECJ    |-CAX    |+ECJ [B]|+GEB    |
+CAX Caxias do Sul     |+GRE  |-SAJ|+CEA    |-GEB    |+ESP    |-INT    |+SNL    |-NHA    |+ECJ    |+YFC [B]|-PLT    |
+YFC Ypiranga          |-SNL  |+NHA|-PLT    |-INT [B]|+ECJ    |+SAJ [B]|-CEA    |+GEB    |-ESP    |-CAX [B]|+GRE    |
+SAJ São José          |-ESP  |+CAX|+GRE [B]|-CEA    |+GEB    |-YFC    |+ECJ    |-INT    |+SNL    |+PLT [B]|-NHA    |
+CEA Aimoré            |-GEB  |+ESP|-CAX    |+SAJ    |-GRE    |-PLT [B]|+YFC    |-ECJ    |+NHA    |+INT [B]|-SNL    | 
+SNL São Luiz          |+YFC  |-ECJ|-INT [B]|+NHA    |-PLT    |+ESP    |-CAX    |+GRE    |+SNL    |+SNL [B]|+CEA    |
+GEB Brasil de Pelotas |+CEA  |-GRE|-ESP [B]|+CAX    |-SAJ    |-NHA [B]|+INT    |-YFC    |+PLT    |+SNL [B]|-ECJ    |
+NHA Novo Hamburgo     |+PLT  |-YFC|+ECJ    |-SNL    |+INT    |+GEB [B]|-ESP    |+CAX    |+NHA    |+NHA [B]|+SAJ    |
+ESP Esportivo         |+SAJ  |-CEA|+GEB    |+GRE [B]|-CAX    |-SNL    |+NHA    |-PLT    |+YFC    |+ECJ [B]|+ESP    |
+PLT Pelotas           |-NHA  |+INT|+YFC [B]|-ECJ    |+SNL    |+CEA [B]|-GRE    |+ESP    |-GEB    |-SAJ [B]|+CAX    |
+GRE Grêmio            |-CAX  |+GEB|-SAJ    |-ESP [B]|+CEA    |-ECJ    |+PLT    |-SNL    |+INT    |+NHA [B]|-YFC    |
 
-### Home-Away Pattern:
+#### Home-Away Pattern:
 
-Team  |INT|ECJ|SAJ|YFC|SAJ|CEA|SNL|GEB|NHA|ESP|PLT|GRE|
+The timetable was balanced given that the deviation between home and away games was 1 for every team.
+
+Team  |INT|ECJ|CAX|YFC|SAJ|CEA|SNL|GEB|NHA|ESP|PLT|GRE|
 ------|---|---|---|---|---|---|---|---|---|---|---|---|
-Home  |	6 |	5 | 6 |	5 |	6 |	5 |	5 |	5 |	6 |	6 |	6 |	5 |
+Home  |	6 |	5 | 6 |	5 |	6 |	5 |	5 |	5 |	6 |	6 |	6 |	5 |git add
 Away  |	5 |	6 | 5 |	6 |	5 |	6 |	6 |	6 |	5 |	5 |	5 |	6 |
 
-### Break Assessment:
+#### Break Assessment:
 
-Team  |INT|ECJ|SAJ|YFC|SAJ|CEA|SNL|GEB|NHA|ESP|PLT|GRE|
+The number of breaks in the 2021 timetable was 26 (sub-optimal).
+
+> For any 2n (n ∈ N), there exists a timetable of 2n teams that has a consistent home–away assignment with 2n − 2 breaks.[²](#references)
+
+Team  |INT|ECJ|CAX|YFC|SAJ|CEA|SNL|GEB|NHA|ESP|PLT|GRE|
 ------|---|---|---|---|---|---|---|---|---|---|---|---|
 Breaks|	2 |	1 | 1 |	3 |	2 |	2 |	2 |	3 |	2 |	3 |	3 |	2 |
 
-The number of breaks in the 2021 timetable was 26, way above the minimum viable number of 10 breaks.
-
-> For any 2n (n ∈ N), there exists a timetable of 2n teams that has a consistent home–away assignment with 2n − 2 breaks.
-
-Also, the distribution of these breaks is not fair. There are teams with 2 breaks advantage on its opponents. Thus, there is room for improvement in this timetabling case.
+Also, the distribution of these breaks was not fair. There was teams with 2 breaks advantage on its opponents. 
 
 ## Algorithm
 
