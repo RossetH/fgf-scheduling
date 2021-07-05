@@ -57,17 +57,17 @@ Gauchão is the regional first division football tournament of Rio Grande do Sul
 
 The 2021 timetable was:
 
-|Slot                 | 1   | 2   | 3      | 4      | 5      | 6      | 7      | 8      | 9      | ESP    | PLT    |
+|Slot                 | 1   | 2   | 3      | 4      | 5      | 6      | 7      | 8      | 9      | 10    | 11    |
 |:-------------------:|:---:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 INT Internacional     |+ECJ  |-PLT|+SNL    |+YFC [B]|-NHA    |+CAX    |-GEB    |+SAJ    |-GRE    |-CEA [B]|+ESP    |
-ECJ Juventude         |-INT  |+SNL|-NHA    |+PLT    |-YFC    |+GRE    |-SAJ    |-ECJ    |-CAX    |+ECJ [B]|+GEB    |
+ECJ Juventude         |-INT  |+SNL|-NHA    |+PLT    |-YFC    |+GRE    |-SAJ    |-CEA    |-CAX    |+ESP [B]|+GEB    |
 CAX Caxias do Sul     |+GRE  |-SAJ|+CEA    |-GEB    |+ESP    |-INT    |+SNL    |-NHA    |+ECJ    |+YFC [B]|-PLT    |
 YFC Ypiranga          |-SNL  |+NHA|-PLT    |-INT [B]|+ECJ    |+SAJ [B]|-CEA    |+GEB    |-ESP    |-CAX [B]|+GRE    |
 SAJ São José          |-ESP  |+CAX|+GRE [B]|-CEA    |+GEB    |-YFC    |+ECJ    |-INT    |+SNL    |+PLT [B]|-NHA    |
 CEA Aimoré            |-GEB  |+ESP|-CAX    |+SAJ    |-GRE    |-PLT [B]|+YFC    |-ECJ    |+NHA    |+INT [B]|-SNL    | 
-SNL São Luiz          |+YFC  |-ECJ|-INT [B]|+NHA    |-PLT    |+ESP    |-CAX    |+GRE    |+SNL    |+SNL [B]|+CEA    |
+SNL São Luiz          |+YFC  |-ECJ|-INT [B]|+NHA    |-PLT    |+ESP    |-CAX    |+GRE    |+SAJ    |+GEB [B]|+CEA    |
 GEB Brasil de Pelotas |+CEA  |-GRE|-ESP [B]|+CAX    |-SAJ    |-NHA [B]|+INT    |-YFC    |+PLT    |+SNL [B]|-ECJ    |
-NHA Novo Hamburgo     |+PLT  |-YFC|+ECJ    |-SNL    |+INT    |+GEB [B]|-ESP    |+CAX    |+NHA    |+NHA [B]|+SAJ    |
+NHA Novo Hamburgo     |+PLT  |-YFC|+ECJ    |-SNL    |+INT    |+GEB [B]|-ESP    |+CAX    |+CEA    |+GRE [B]|+SAJ    |
 ESP Esportivo         |+SAJ  |-CEA|+GEB    |+GRE [B]|-CAX    |-SNL    |+NHA    |-PLT    |+YFC    |+ECJ [B]|+ESP    |
 PLT Pelotas           |-NHA  |+INT|+YFC [B]|-ECJ    |+SNL    |+CEA [B]|-GRE    |+ESP    |-GEB    |-SAJ [B]|+CAX    |
 GRE Grêmio            |-CAX  |+GEB|-SAJ    |-ESP [B]|+CEA    |-ECJ    |+PLT    |-SNL    |+INT    |+NHA [B]|-YFC    |
