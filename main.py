@@ -14,7 +14,7 @@ class FGFScheduler(object):
     def solve(self):
         self.ampl.read('ampl/homeawaypattern.mod')
         self.ampl.readData('ampl/slots_2021fgf.dat')
-        self.ampl.setOption('solver','CPLEX.exe')
+        self.ampl.setOption('solver','cbc.exe')
         self.ampl.solve()
         pass
 
@@ -61,19 +61,20 @@ class FGFHandler(object):
         self.get_homeawaypattern()
         self.get_breaks()
 
-model = FGFScheduler(amplpath=r'C:\Users\Henrique\AMPL',
-                    model_path = 'ampl/homeawaypattern.mod',
-                    data_path = 'ampl/slots_2021fgf.dat')
+if __name__ == '__main__':
+    model = FGFScheduler(amplpath=r'~/path/to/AMPL',
+                        model_path = 'ampl/homeawaypattern.mod',
+                        data_path = 'ampl/slots_2021fgf.dat')
 
-model.solve()
+    model.solve()
 
-schedule = FGFHandler(model.ampl)
+    schedule = FGFHandler(model.ampl)
 
-schedule.handle()
+    schedule.handle()
 
-home_away_agg = array([count_nonzero(array(schedule.homeawaypattern)==0,axis=1),
-                        count_nonzero(array(schedule.homeawaypattern)==1,axis=1)])
+    home_away_agg = array([count_nonzero(array(schedule.homeawaypattern)==0,axis=1),
+                            count_nonzero(array(schedule.homeawaypattern)==1,axis=1)])
 
-breaks_agg = count_nonzero(array(schedule.breaks)==0,axis=1)
+    breaks_agg = count_nonzero(array(schedule.breaks)==0,axis=1)
 
-n_breaks = count_nonzero(array(schedule.breaks)==0)
+    n_breaks = count_nonzero(array(schedule.breaks)==0)
