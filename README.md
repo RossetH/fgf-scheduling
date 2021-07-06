@@ -70,7 +70,7 @@ CEA Aimoré            |-GEB  |+ESP|-CAX    |+SAJ    |-GRE    |-PLT [B]|+YFC    
 SNL São Luiz          |+YFC  |-ECJ|-INT [B]|+NHA    |-PLT    |+ESP    |-CAX    |+GRE    |+SAJ    |+GEB [B]|+CEA    |
 GEB Brasil de Pelotas |+CEA  |-GRE|-ESP [B]|+CAX    |-SAJ    |-NHA [B]|+INT    |-YFC    |+PLT    |+SNL [B]|-ECJ    |
 NHA Novo Hamburgo     |+PLT  |-YFC|+ECJ    |-SNL    |+INT    |+GEB [B]|-ESP    |+CAX    |+CEA    |+GRE [B]|+SAJ    |
-ESP Esportivo         |+SAJ  |-CEA|+GEB    |+GRE [B]|-CAX    |-SNL    |+NHA    |-PLT    |+YFC    |+ECJ [B]|+ESP    |
+ESP Esportivo         |+SAJ  |-CEA|+GEB    |+GRE [B]|-CAX    |-SNL    |+NHA    |-PLT    |+YFC    |+ECJ [B]|+INT    |
 PLT Pelotas           |-NHA  |+INT|+YFC [B]|-ECJ    |+SNL    |+CEA [B]|-GRE    |+ESP    |-GEB    |-SAJ [B]|+CAX    |
 GRE Grêmio            |-CAX  |+GEB|-SAJ    |-ESP [B]|+CEA    |-ECJ    |+PLT    |-SNL    |+INT    |+NHA [B]|-YFC    |
 
