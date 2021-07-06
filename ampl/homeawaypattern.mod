@@ -47,3 +47,24 @@ subject to awaybreak {i in Teams, t in 2..n-1}:
 # a team can't head to a away game from a away game
 0 <= start[i]+sum{t1 in 1..t-2}(to_home[i,t1]-
 	to_away[i,t1])-to_away[i,t-1];
+
+subject to local_rivals1 {t in Rounds}:
+# local rivals can't play home games on the same day (security reasons)
+# INT (1) and GRE (12)
+0 <= start[1]+sum{t1 in 1..t-1}(to_home[1,t1]-
+	to_away[1,t1]) + start[12]+ sum{t1 in 1..t-1}(to_home[12,t1]-
+	to_away[12,t1]) <= 1;
+
+subject to local_rivals2 {t in Rounds}:
+# local rivals can't play home games on the same day (security reasons)
+# ECJ (2) and CAX (3)
+0 <= start[2]+sum{t1 in 1..t-1}(to_home[2,t1]-
+	to_away[2,t1]) + start[3] + sum{t1 in 1..t-1}(to_home[3,t1]-
+	to_away[3,t1]) <= 1;
+	
+subject to local_rivals3 {t in Rounds}:
+# local rivals can't play home games on the same day (security reasons)
+# GEB (8) and PEL (11)
+0 <= start[8]+sum{t1 in 1..t-1}(to_home[8,t1]-
+	to_away[8,t1]) + start[11] + sum{t1 in 1..t-1}(to_home[8,t1]-
+	to_away[11,t1]) <= 1;
